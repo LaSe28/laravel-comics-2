@@ -15,6 +15,10 @@ html{
     margin: 0 auto;
 }
 
+.p-relative{
+    position: relative;
+}
+
 
 // section header      ********************************************************
 
@@ -85,6 +89,7 @@ main{
             width: calc((100% / 6) - 2rem);
             margin: 2rem 1rem;
             .thumb{
+                display: inline-block;
                 height: 160px;
                 overflow: hidden;
                 img{
@@ -119,6 +124,125 @@ main{
 
     }
 }
+
+// section comic      ********************************************************
+
+.comic {
+    .comic-container{
+        display: flex;
+        align-items: center;
+        .container-text{
+            margin-right: 3rem;
+        }
+
+    }
+    .comic-thumb{
+        position: absolute;
+        bottom: 1rem;
+        border: 1px solid white;
+    }
+    h2{
+        text-transform: uppercase;
+        margin:3rem 0 1.5rem 0;
+    }
+    .shop-sec{
+        color: rgba($color: #ffffff, $alpha: 0.5);
+        height: 3rem;
+        background-color: #70B864;
+        margin-bottom: 1rem;
+        display: flex;
+        .price{
+            padding: 1rem;
+            border-right: 1px solid green;
+            border-bottom: 1px solid green;
+            display: flex;
+            flex-grow: 4;
+            justify-content: space-between;
+            div{
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .check-ava{
+            border-bottom: 1px solid green;
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .description{
+        margin-bottom:3rem ;
+        line-height: 1.8rem;
+    }
+    .info{
+        background-color: #f6f6f6;
+        padding-bottom: 3rem;
+        h3{
+            margin-top: 1rem;
+        }
+        .info-container{
+            display: flex;
+
+            .talent{
+                width: 50%;
+                .list-talents{
+                    .artists{
+                        border-top: 1px solid lightgray;
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        p{
+                            margin-top: 1rem;
+                        }
+                        .list-artist{
+                            width: 80%;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    .writers{
+                        border-top: 1px solid lightgray;
+                        border-bottom: 1px solid lightgray;
+                        display: flex;
+                        justify-content: space-between;
+                        p{
+                            margin-bottom: 1rem;
+                            margin-top: 1rem;
+                        }
+                        .list-writers{
+                            width: 80%;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+            .specs{
+                width: 50%;
+                margin-left: 3rem;
+                .specs-sec{
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: 1px solid lightgrey;
+                    &:first-of-type{
+                        margin-top: 1rem;
+                    }
+                    &:last-of-type{
+                        border-bottom: 1px solid lightgrey;
+                    }
+                }
+                p{
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+
+            }
+        }
+    }
+}
+
 
 // section footer      ********************************************************
 

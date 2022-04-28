@@ -33,3 +33,16 @@ Route::get('/comics', function () {
     ];
     return view('guest.comics', $data);
 });
+
+Route::get('/comics/{id}', function ($id) {
+    $comics = collect(config('comics'));
+    $data = [
+        'comics' => $comics
+    ];
+    $selectedComic = $comics->firstWhere('id', $id);
+    $date = strtotime($selectedComic['sale_date']);
+    $formatDate = date('M d Y', $date);
+
+    return view('guest.comic', ['comic' => $selectedComic,
+    'date' => $formatDate]);
+});
